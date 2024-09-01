@@ -7,7 +7,7 @@ const path = require('path');
 const { log } = require('console');
 const logEvents = async function(message){ 
     const dateTime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}`;
-    const logitem = `${dateTime}\t${uuid()}\t${message}`; //date, unique id, and message
+    const logitem = `${dateTime}\t${uuid()}\t${message}\n`; //date, unique id, and message
     console.log(logitem);
     try{ 
         //if path doesnt exist append file created the path
@@ -19,6 +19,5 @@ const logEvents = async function(message){
         console.log(err);
     }
 } 
-
+////
 module.exports = logEvents;
-//beautiful event logger
